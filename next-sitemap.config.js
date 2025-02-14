@@ -1,8 +1,9 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-	siteUrl: 'https://cecilia123.com',
+	siteUrl: 'https://www.cecilia123.com',
 	generateRobotsTxt: true,
 	robotsTxtOptions: {
+		additionalSitemaps: ['https://www.cecilia123.com/sitemap.xml'],
 		policies: [
 			{
 				userAgent: '*',

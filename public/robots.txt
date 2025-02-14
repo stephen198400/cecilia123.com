@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://cecilia123.com
+Host: https://www.cecilia123.com
 
 # Sitemaps
-Sitemap: https://cecilia123.com/sitemap.xml
+Sitemap: https://www.cecilia123.com/sitemap.xml
