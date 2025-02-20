@@ -44,8 +44,20 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head>
-				<Script id="google-tag-manager" strategy="afterInteractive">
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+			>
+				{/* Google Tag Manager (noscript) */}
+				<noscript>
+					<iframe
+						src="https://www.googletagmanager.com/ns.html?id=GTM-M4PN2ZCT"
+						height="0"
+						width="0"
+						style={{ display: 'none', visibility: 'hidden' }}
+					></iframe>
+				</noscript>
+				{/* Google Tag Manager */}
+				<Script id="google-tag-manager" strategy="beforeInteractive">
 					{`
 						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -54,6 +66,7 @@ export default function RootLayout({
 						})(window,document,'script','dataLayer','GTM-M4PN2ZCT');
 					`}
 				</Script>
+				{/* Google Analytics */}
 				<Script
 					src="https://www.googletagmanager.com/gtag/js?id=AW-16858007389"
 					strategy="afterInteractive"
@@ -66,18 +79,6 @@ export default function RootLayout({
 						gtag('config', 'AW-16858007389');
 					`}
 				</Script>
-			</head>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				<noscript>
-					<iframe
-						src="https://www.googletagmanager.com/ns.html?id=GTM-M4PN2ZCT"
-						height="0"
-						width="0"
-						style={{ display: 'none', visibility: 'hidden' }}
-					></iframe>
-				</noscript>
 				{children}
 			</body>
 		</html>
