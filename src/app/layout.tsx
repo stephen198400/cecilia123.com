@@ -79,6 +79,20 @@ export default function RootLayout({
 						gtag('config', 'AW-16858007389');
 					`}
 				</Script>
+
+				{/* Google Ads Tracking */}
+				<Script
+					src="https://www.googletagmanager.com/gtag/js?id=AW-1040536470"
+					strategy="afterInteractive"
+				/>
+				<Script id="google-ads-tracking" strategy="afterInteractive">
+					{`
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'AW-1040536470');
+					`}
+				</Script>
 				{children}
 			</body>
 		</html>
