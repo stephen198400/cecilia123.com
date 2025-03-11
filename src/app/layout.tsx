@@ -66,6 +66,7 @@ export default function RootLayout({
 						})(window,document,'script','dataLayer','GTM-M4PN2ZCT');
 					`}
 				</Script>
+
 				{/* Google Analytics */}
 				<Script
 					src="https://www.googletagmanager.com/gtag/js?id=AW-16858007389"
